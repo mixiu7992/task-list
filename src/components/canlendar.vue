@@ -5,7 +5,7 @@
         <div class="prev box box-rl" @click="clickBackward">
           <div class="prev-handle box box-lr box-align-center box-pack-center">《</div>
         </div>
-        <div class="date-area box box-lr box-align-center box-pack-center"> {{ curYear || "--" }}年 {{ curMonth || "--" }}月</div>
+        <picker class="date-area box box-lr box-align-center box-pack-center" mode="date" fields="month" :value="currentDate" @change="didPickerData"> {{ curYear || "--" }}年 {{ curMonth || "--" }}月</picker>
         <div class="next box box-lr" @click="clickForward">
           <div class="next-handle box box-lr box-align-center box-pack-center">》</div>
         </div>
@@ -32,6 +32,7 @@
       return {
         curYear: 1970,
         curMonth: 1,
+        curDate: '',
         weeksCh: [ '日', '一', '二', '三', '四', '五', '六' ],
         hasEmptyGrid: false,
         emptyDayGrids: [],
@@ -109,6 +110,15 @@
         this.curMonth = month
         this.calculateEmptyGrids(year, month)
         this.calculateDays(year, month)
+      },
+      didPickerData (e) {
+        let arr = e.mp.detail.value.split('-')
+        this.updateCalendarGrid(arr[0], arr[1])
+      }
+    },
+    computed: {
+      currentDate () {
+        return this.curYear.toString() + '-' + this.curMonth.toString()
       }
     }
   }

@@ -11,7 +11,7 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
-    "mpvue": "^1.0.5",
+    "mpvue": "^1.0.6",
     "vuex": "^2.3.1"
   },
   "devDependencies": {
@@ -45,13 +45,13 @@
     "http-proxy-middleware": "^0.17.3",
     "less": "^3.0.1",
     "less-loader": "^4.1.0",
-    "mpvue-loader": "^1.0.7",
-    "mpvue-template-compiler": "^1.0.5",
+    "mpvue-loader": "^1.0.8",
+    "mpvue-template-compiler": "^1.0.6",
     "mpvue-webpack-target": "^1.0.0",
     "opn": "^5.1.0",
     "optimize-css-assets-webpack-plugin": "^2.0.0",
     "ora": "^1.2.0",
-    "postcss-loader": "^2.0.6",
+    "postcss-loader": "^2.1.3",
     "postcss-mpvue-wxss": "^1.0.0",
     "px2rpx-loader": "^0.1.8",
     "rimraf": "^2.6.0",

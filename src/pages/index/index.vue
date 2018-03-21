@@ -66,11 +66,14 @@ export default {
   created () {
     // 调用应用实例的方法获取全局数据
     this.getUserInfo()
+  },
+  updated () {
+    console.log('updated')
   }
 }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
 .userinfo {
   display: flex;
   flex-direction: column;
