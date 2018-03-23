@@ -8,6 +8,7 @@
 		"newFeature": true
 	},
 	"miniprogramRoot": "./dist/",
+  "qcloudRoot": "./server/",
 	"compileType": "miniprogram",
 	"appid": "wx7d284f7ca588956c",
 	"projectname": "tasklist",

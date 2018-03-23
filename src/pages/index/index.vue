@@ -1,16 +1,10 @@
 <template>
-  <div class="container" @click="clickHandle('test click', $event)">
+  <div class="" @click="clickHandle('test click', $event)">
 
     <div class="userinfo" @click="bindViewTap">
       <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
       <div class="userinfo-nickname">
         <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
       </div>
     </div>
 
@@ -52,6 +46,7 @@ export default {
         success: () => {
           wx.getUserInfo({
             success: (res) => {
+              console.log(res.userInfo)
               this.userInfo = res.userInfo
             }
           })
@@ -78,6 +73,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .userinfo-avatar {
