@@ -1,6 +1,10 @@
-const router = require('koa-router')({
-  prefix: '/weapp'
-})
+const router = require('koa-router')
 const controllers = require('../controller')
 
-const  { auth: { authorizationMiddlewar, validationMiddleware }} = require()
+const {auth: { authorizationMiddleware, validationMiddleware }} = require('../qcloud')
+
+router.get('/login', authorizationMiddleware, controllers.login)
+
+router.get('/user', validationMiddleware, controllers.user)
+
+module.exports = router
