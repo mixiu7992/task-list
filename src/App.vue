@@ -12,7 +12,6 @@ export default {
     // console.log('app created and cache logs by setStorageSync')
 
     qcloud.setLoginUrl(config.service.loginUrl)
-    console.log(config.service.loginUrl)
   },
   mounted () {
     qcloud.login({
@@ -21,7 +20,6 @@ export default {
       },
       fail: (err) => {
         console.log(err)
-        console.log('登录')
       }
     })
   }

@@ -1,4 +1,4 @@
-const router = require('koa-router')
+const router = require('koa-router')()
 const controllers = require('../controller')
 
 const {auth: { authorizationMiddleware, validationMiddleware }} = require('../qcloud')

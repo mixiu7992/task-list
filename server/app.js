@@ -1,6 +1,6 @@
 const Koa = require('koa')
 const app = new Koa()
-const debug = require('debug')('task-list')
+const debug = require('debug')('task-list-server')
 const response = require('./middlewares/response')
 const config = require('./config')
 

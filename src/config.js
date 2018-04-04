@@ -3,6 +3,7 @@
  */
 
 // 此处主机域名修改成腾讯云解决方案分配的域名
+// let host = 'http://localhost:5757' // https://mpv5cauq.qcloud.la localhost:5757
 let host = 'https://mpv5cauq.qcloud.la'
 
 let config = {

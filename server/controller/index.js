@@ -23,7 +23,6 @@ const mapDir = d => {
     }
   })
 
-  console.log(tree)
   return tree
 }
 
