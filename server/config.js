@@ -21,7 +21,7 @@ const CONF = {
     port: 3306,
     user: 'root',
     db: 'cAuth',
-    pass: 'wx7d284f7ca588956c',
+    pass: 'baibin', // 'wx7d284f7ca588956c',
     char: 'utf8mb4'
   },
 
@@ -41,13 +41,13 @@ const CONF = {
   wxLoginExpires: 7200,
   wxMessageToken: 'abcdefgh',
   // 本地部署需要添加
-  // serverHost: 'localhost',
-  // tunnelServerUrl: '',
-  // tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
-  // qcloudAppId: '您的腾讯云 AppID',
-  // qcloudSecretId: '您的腾讯云 SecretId',
-  // qcloudSecretKey: '您的腾讯云 SecretKey',
-  // networkTimeout: 30000
+  serverHost: 'localhost',
+  tunnelServerUrl: '',
+  tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
+  qcloudAppId: '您的腾讯云 AppID',
+  qcloudSecretId: '您的腾讯云 SecretId',
+  qcloudSecretKey: '您的腾讯云 SecretKey',
+  networkTimeout: 30000
 }
 
 module.exports = CONF
