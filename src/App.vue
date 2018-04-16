@@ -10,7 +10,6 @@ export default {
     // wx.setStorageSync('logs', logs)
     //
     // console.log('app created and cache logs by setStorageSync')
-
     qcloud.setLoginUrl(config.service.loginUrl)
   },
   mounted () {

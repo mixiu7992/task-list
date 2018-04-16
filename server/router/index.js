@@ -1,7 +1,10 @@
-const router = require('koa-router')()
-const controllers = require('../controller')
+const router = require('koa-router')({
+  prefix: '/v1'
+})
 
-const {auth: { authorizationMiddleware, validationMiddleware }} = require('../qcloud')
+const  controllers = require('../controllers')
+
+const { auth: { authorizationMiddleware, validationMiddleware } } = require('../qcloud')
 
 router.get('/login', authorizationMiddleware, controllers.login)
 

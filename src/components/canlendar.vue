@@ -11,14 +11,14 @@
         </div>
       </div>
       <div class="weeks box box-lr box-pack-center box-align-center">
-        <div class="flex week fs28" v-for="(item, i) in weeksCh" v-bind:key="i">{{ item }}</div>
+        <div class="flex week fs28" v-for="item in weeksCh" v-bind:key="item">{{ item }}</div>
       </div>
       <div class="days box box-lr box-wrap">
-        <div v-if="hasEmptyGrid" class="grid white-color box box-align-center box-pack-center" v-for="grid in emptyDayGrids">
+        <div v-if="hasEmptyGrid" class="grid white-color box box-align-center box-pack-center" v-for="grid in emptyDayGrids" v-bind:key="grid.key">
         </div>
-        <div class="grid white-color box box-align-center box-pack-center" v-for="grid in dayGrids" @click="tapDayGrid(index)">
+        <div class="grid white-color box box-align-center box-pack-center" v-for="grid in dayGrids" v-bind:key="grid.data.key" @click="tapDayGrid(index)">
           <div class="day box box-align-center box-pack-center" v-bind:class="{ 'border-radius pink-bg': grid.selected }">
-            {{ grid.day }}
+            {{ grid.data.day }}
           </div>
         </div>
       </div>
@@ -62,7 +62,9 @@
         let emptyGrids = []
         if (firstDayOfWeek > 0) {
           for (let i = 0; i < firstDayOfWeek; i++) {
-            emptyGrids.push(i)
+            let day = { idx: i,
+                        key: year.toString() + month.toString() + i.toString() }
+            emptyGrids.push(day)
           }
           this.hasEmptyGrid = true
           this.emptyDayGrids = emptyGrids
@@ -76,7 +78,7 @@
         let thisMonthDays = this.getThisMonthDays(year, month)
         for (let i = 1; i<= thisMonthDays; i++) {
           days.push({
-            day: i,
+            data: { day: i, key: year.toString() + month.toString() + i.toString() },
             selected: false
           })
         }
