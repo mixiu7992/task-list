@@ -6,8 +6,9 @@ module.exports = async (ctx, next) => {
   console.log('server login white')
   console.log(ctx.state.$wxInfo.userinfo)
   if (ctx.state.$wxInfo.loginState) {
-    ctx.state.data = ctx.state.$wxInfo
+    ctx.state.data = ctx.state.$wxInfo.userinfo
     ctx.state.data['time'] = Math.floor(Date.now() / 1000)
+    ctx.state.data['wxDetail'] = ctx.state.$wxInfo
   }
-  next()
+  // next()
 }

@@ -1,37 +1,3 @@
-// const fs = require('fs')
-// const qcloud = require('wafer-node-sdk')
-//
-// const configs = require('./config')
-//
-// const sdkConfig = (() => {
-//   const sdkConfigPath = '/data/release/sdk.config.json'
-//
-//   try {
-//     const stats = fs.statSync(sdkConfigPath)
-//
-//     if (!stats.isFile()) {
-//       console.log('sdk.config.json not exist, will user config.js')
-//       return {}
-//     }
-//   } catch (e) {
-//     console.log('失败1')
-//     return {}
-//   }
-//
-//   try {
-//     const content = fs.readFileSync(sdkConfigPath, 'utf8')
-//     return JSON.parse(content)
-//   } catch (e) {
-//     console.log('sdk.config.json paser error')
-//     return {}
-//   }
-// })()
-//
-// console.log(sdkConfig)
-// console.log(configs)
-//
-// module.exports = qcloud(Object.assign({}, sdkConfig, configs))
-
 const fs = require('fs')
 const qcloud = require('wafer-node-sdk')
 
