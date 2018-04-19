@@ -21,7 +21,7 @@ const CONF = {
     port: 3306,
     user: 'root',
     db: 'cAuth',
-    pass: 'wx7d284f7ca588956c',
+    pass: 'baibinzhao7992!',
     char: 'utf8mb4'
   },
 
@@ -39,15 +39,15 @@ const CONF = {
 
   // 微信登录态有效期
   wxLoginExpires: 7200,
-  wxMessageToken: 'abcdefgh'
+  wxMessageToken: 'abcdefgh',
   // // 本地部署需要添加
-  // serverHost: 'localhost',
-  // tunnelServerUrl: '',
-  // tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
-  // qcloudAppId: '1256326525',
-  // qcloudSecretId: 'AKIDNaaMuDu9l8HBpDGDpBICrIVUEj02mMcd',
-  // qcloudSecretKey: 'sVs0sUqwmNkslPnytYw4wXrvjGWWGjxe',
-  // networkTimeout: 30000
+  serverHost: 'mpv5cauq.qcloud.la',
+  tunnelServerUrl: '',
+  tunnelSignatureKey: '27fb7d1c161b7ca52d73cce0f1d833f9f5b5ec89',
+  qcloudAppId: '1256326525',
+  qcloudSecretId: 'AKIDNaaMuDu9l8HBpDGDpBICrIVUEj02mMcd',
+  qcloudSecretKey: 'sVs0sUqwmNkslPnytYw4wXrvjGWWGjxe',
+  networkTimeout: 30000
 }
 
 module.exports = CONF

@@ -5,14 +5,27 @@
 export default {
   created () {
     // 调用API从本地缓存中获取数据
-    // const logs = wx.getStorageSync('logs') || []
-    // logs.unshift(Date.now())
-    // wx.setStorageSync('logs', logs)
-    //
-    // console.log('app created and cache logs by setStorageSync')
+    const logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
+
+    console.log('app created and cache logs by setStorageSync')
     qcloud.setLoginUrl(config.service.loginUrl)
   },
   mounted () {
+    // wx.login({
+    //   success: (res) => {
+    //     console.log(res)
+    //     wx.getUserInfo({
+    //       success: (res) => {
+    //         console.log(res)
+    //       }
+    //     })
+    //   },
+    //   fail: (err) => {
+    //     console.error(err)
+    //   }
+    // })
     qcloud.login({
       success: (res) => {
         console.log(res)

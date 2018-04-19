@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div v-for="event in dataSource">
 
-    </div>
   </div>
 </template>
 
