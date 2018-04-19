@@ -10,4 +10,6 @@ router.get('/login', authorizationMiddleware, controllers.login)
 
 router.get('/user', validationMiddleware, controllers.user)
 
+router.post('/addEvent', validationMiddleware, controllers.event)
+
 module.exports = router

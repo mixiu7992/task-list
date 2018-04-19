@@ -13,22 +13,26 @@ export default {
     qcloud.setLoginUrl(config.service.loginUrl)
   },
   mounted () {
-    // wx.login({
-    //   success: (res) => {
-    //     console.log(res)
-    //     wx.getUserInfo({
-    //       success: (res) => {
-    //         console.log(res)
-    //       }
-    //     })
-    //   },
-    //   fail: (err) => {
-    //     console.error(err)
-    //   }
-    // })
     qcloud.login({
       success: (res) => {
         console.log(res)
+
+        qcloud.request({
+          url: config.service.addEventUrl,
+          method: 'POST',
+          data:
+            { beginTime: '1988.09.29',
+              endTime: '1988.10.20',
+              name: '初始时间'
+            },
+          login: true,
+          success: (res) => {
+            console.log(res)
+          },
+          fail: (err) => {
+            console.log(err)
+          }
+        })
       },
       fail: (err) => {
         console.log(err)

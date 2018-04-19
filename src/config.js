@@ -16,6 +16,9 @@ let config = {
     // 登录地址，用于建立会话
     loginUrl: `${host}/${prefix}/login`,
 
+    // 添加时间
+    addEventUrl: `${host}/${prefix}/addEvent`,
+
     // 测试的请求地址，用于测试会话
     requestUrl: `${host}/${prefix}/user`,
 
