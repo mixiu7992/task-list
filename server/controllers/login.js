@@ -1,4 +1,4 @@
-const debug = require('debug')('task-list')
+const debug = require('debug')('task-list:login')
 
 // 登录授权接口
 module.exports = async (ctx, next) => {
@@ -10,4 +10,3 @@ module.exports = async (ctx, next) => {
     ctx.state.data['time'] = Math.floor(Date.now() / 1000)
   }
 }
-

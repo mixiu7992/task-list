@@ -19,6 +19,9 @@ let config = {
     // 添加时间
     addEventUrl: `${host}/${prefix}/addEvent`,
 
+    // 添加时间
+    eventListUrl: `${host}/${prefix}/eventList`,
+
     // 测试的请求地址，用于测试会话
     requestUrl: `${host}/${prefix}/user`,
 
