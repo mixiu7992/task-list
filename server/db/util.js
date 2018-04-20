@@ -9,5 +9,8 @@ module.exports = new Sequelize(config.mysql.db, config.mysql.user, config.mysql.
     max: 3,
     min: 0,
     idle: 1000
+  },
+  define: {
+    underscored: true
   }
 })

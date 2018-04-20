@@ -17,22 +17,22 @@ export default {
       success: (res) => {
         console.log(res)
 
-        qcloud.request({
-          url: config.service.addEventUrl,
-          method: 'POST',
-          data:
-            { beginTime: '1988-09-29 00:00:00',
-              endTime: '2020-10-20 00:00:00',
-              name: '初始时间'
-            },
-          login: true,
-          success: (res) => {
-            console.log(res)
-          },
-          fail: (err) => {
-            console.log(err)
-          }
-        })
+        // qcloud.request({
+        //   url: config.service.addEventUrl,
+        //   method: 'POST',
+        //   data:
+        //     { beginTime: '1988-09-29 00:00:00',
+        //       endTime: '2020-10-20 00:00:00',
+        //       name: '初始时间'
+        //     },
+        //   login: true,
+        //   success: (res) => {
+        //     console.log(res)
+        //   },
+        //   fail: (err) => {
+        //     console.log(err)
+        //   }
+        // })
         qcloud.request({
           url: config.service.eventListUrl,
           login: true,
